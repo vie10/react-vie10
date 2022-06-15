@@ -1,0 +1,82 @@
+@keyframes enter {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@mixin size {
+  @media screen and (max-width: 600px) {
+    @include smallSize
+  }
+  @media screen and (min-width: 600px) {
+    @include normalSize
+  }
+}
+
+@mixin normalSize {
+  width: 500px;
+  height: 500px;
+}
+
+@mixin smallSize {
+  width: 280px;
+  height: 300px;
+}
+
+.box {
+  background: #e8e8e8;
+  border-top: solid gray 2px;
+  border-right: solid gray 2px;
+  border-left: solid gray 2px;
+  border-radius: 19px;
+  margin: 10px;
+  animation: fly 3s linear infinite;
+
+  @include size
+}
+
+.illustration {
+  z-index: 0;
+  border-radius: 15px;
+  position: absolute;
+
+  @include size
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+  position: absolute;
+  z-index: 99;
+  @include size;
+
+  h2 {
+    backdrop-filter: blur(5px);
+    margin: 0;
+    width: 100%;
+    border: solid gray 1px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.27);
+  }
+}

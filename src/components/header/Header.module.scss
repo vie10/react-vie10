@@ -1,0 +1,28 @@
+@keyframes enter {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header {
+  height: 20px;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  color: rgb(245, 245, 247);
+  background: rgba(0, 0, 0, 0.8);
+  font: caption;
+  text-align: center;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+
+  animation: enter 1s linear;
+
+  p {
+    margin: 0;
+  }
+}

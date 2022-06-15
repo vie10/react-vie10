@@ -1,0 +1,26 @@
+@keyframes enter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#app {
+    display: grid;
+    grid-template: "header" "body";
+    grid-template-rows: 50px auto;
+    height: 100%;
+}
+
+#content-body {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    animation: enter 1s linear;
+}
+
+header {
+    grid-area: header;
+}

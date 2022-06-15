@@ -1,0 +1,20 @@
+.footer {
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f7f7f5;
+  font-variant: all-small-caps;
+  text-align: center;
+  padding: 5px;
+
+  a {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
